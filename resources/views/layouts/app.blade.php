@@ -36,22 +36,24 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
                     <li class="navbar-item">
-                        <a href="#" class="nav-link">Cases</a>
+                        <a href="{{route('Estate.index','all')}}" class="nav-link">Cases</a>
                     </li>
-                    <li class="navbar-item">
-                        <a href="#" class="nav-link">Customers</a>
-                    </li>
-
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             {{__("Category")}}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">{{__("all Cases")}}</a>
-                            <a class="dropdown-item" href="#">{{__("Rent")}}</a>
-                            <a class="dropdown-item" href="#">{{__("Sell")}}</a>
+                            <a class="dropdown-item" href="{{route('Estate.index','all')}}">{{__("all Cases")}}</a>
+                            <a class="dropdown-item" href="{{route('Estate.index','rent')}}">{{__("Rent")}}</a>
+                            <a class="dropdown-item" href="{{route('Estate.index','sell')}}">{{__("Sell")}}</a>
                         </div>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="{{route('Customer.index')}}" class="nav-link">Customers</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="{{route('Customer.index')}}" class="nav-link">Order List</a>
                     </li>
                 </ul>
 

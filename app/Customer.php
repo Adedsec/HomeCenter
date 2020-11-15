@@ -4,9 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Estate extends Model
+class Customer extends Model
 {
-    protected $fillable =[
-
-    ];
+    //
 }
