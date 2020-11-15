@@ -41,6 +41,18 @@
                     <li class="navbar-item">
                         <a href="#" class="nav-link">Customers</a>
                     </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{__("Category")}}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">{{__("all Cases")}}</a>
+                            <a class="dropdown-item" href="#">{{__("Rent")}}</a>
+                            <a class="dropdown-item" href="#">{{__("Sell")}}</a>
+                        </div>
+                    </li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
