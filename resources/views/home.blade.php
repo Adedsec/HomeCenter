@@ -13,8 +13,8 @@
             </div>
 
             <div class="row">
-                <div class="card w-100 h-100 bg-dark">
-                    <div class="card-header text-light">
+                <div class="card w-100 h-100 ">
+                    <div class="card-header bg-dark text-light">
                         <h1>Dashboard</h1>
                     </div>
                     <div class="card-body">
@@ -60,7 +60,7 @@
                                         <div class="card-body">
                                             <h5 class="card-title">{{__("Customers")}}</h5>
                                             <p class="card-text">{{__("List of Customers and Management")}}</p>
-                                            <a href="{{route('Estate.index','all')}}"
+                                            <a href="{{route('Customer.index','all')}}"
                                                class="btn btn-primary">{{__("Enter")}}</a>
                                         </div>
                                     </div>

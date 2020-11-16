@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aacc396b-4a04-40f7-8436-4dcdf7b9d3b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/EstateIndex.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Estate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Estate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EstateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EstateController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_15_122437_create_estates_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_15_122437_create_estates_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_15_184937_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_15_184937_create_orders_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_15_185006_create_customers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_15_185006_create_customers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/EstateIndex.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/EstateIndex.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +162,9 @@
       <workItem from="1604908791574" duration="3984000" />
       <workItem from="1605008132940" duration="442000" />
       <workItem from="1605013898646" duration="30000" />
-      <workItem from="1605436983736" duration="12099000" />
+      <workItem from="1605436983736" duration="12448000" />
+      <workItem from="1605505052965" duration="392000" />
+      <workItem from="1605506168431" duration="2739000" />
     </task>
     <servers />
   </component>

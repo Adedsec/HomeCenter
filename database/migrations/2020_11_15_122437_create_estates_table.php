@@ -18,9 +18,12 @@ class CreateEstatesTable extends Migration
             $table->unsignedInteger('user_id');
             $table->string('title', 100);
             $table->text('description');
+            $table->Integer('price'); // - rahn & + sell
+            $table->unsignedInteger('rent_price'); //  ejare
             $table->string('usage', 100);
             $table->integer('area');
             $table->string('location', 50);
+            $table->string('img_link', 255);
             $table->timestamps();
         });
     }

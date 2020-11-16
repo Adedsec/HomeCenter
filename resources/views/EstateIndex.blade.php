@@ -9,11 +9,16 @@
                     <div class="container">
 
                         <div class="row d-flex align-items-center justify-content-center">
-                            <div class=" form col-8 ">
+                            <div class=" form col-9 ">
                                 <div class="row mb-5">
-                                    <div class="col-9 active-cyan-4">
+                                    <div class="col-6 active-cyan-4">
                                         <input class="form-control active-cyan-4" type="text" placeholder="Search"
                                                aria-label="Search">
+                                    </div>
+                                    <div class="col-3 ">
+                                        <select class="form-control">
+                                            <option>Category</option>
+                                        </select>
                                     </div>
                                     <div class="col-3">
                                         <input type="submit" class="form-control btn btn-success">
