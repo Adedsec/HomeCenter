@@ -17,11 +17,15 @@
                                     </div>
                                     <div class="col-3 ">
                                         <select class="form-control">
-                                            <option>Category</option>
+                                            <option class="">All</option>
+                                            <option>House</option>
+                                            <option>Apartment</option>
+                                            <option>Shop</option>
+                                            <option>Land</option>
                                         </select>
                                     </div>
                                     <div class="col-3">
-                                        <input type="submit" class="form-control btn btn-success">
+                                        <input type="submit" class="form-control btn btn-success" value="Search">
                                     </div>
                                 </div>
                             </div>
