@@ -36,7 +36,7 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
                     <li class="navbar-item">
-                        <a href="{{route('home','all')}}" class="nav-link">Dashboard</a>
+                        <a href="{{route('home')}}" class="nav-link">Dashboard</a>
                     </li>
                     <li class="navbar-item">
                         <a href="{{route('Estate.index','all')}}" class="nav-link">Cases</a>

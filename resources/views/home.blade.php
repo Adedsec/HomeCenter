@@ -20,7 +20,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-8">
-                                <div class="card bg-success text-light h-100">
+                                <div class="card bg-secondary text-light h-100">
                                     <div class="card-header">
                                         <h3> {{__("Profile")}}</h3>
                                     </div>
@@ -41,7 +41,7 @@
                                         <div class="card-body">
                                             <h5 class="card-title">{{__("Orders")}}</h5>
                                             <p class="card-text">{{__("List of Orders and Management of Orders")}}</p>
-                                            <a href="#" class="btn btn-success">{{__("Enter")}}</a>
+                                            <a href="#" class="btn btn-danger">{{__("Enter")}}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -51,7 +51,7 @@
                                             <h5 class="card-title">{{__("Cases")}}</h5>
                                             <p class="card-text">{{__("List of all Cases and Management of Cases")}}</p>
                                             <a href="{{route('Estate.index','all')}}"
-                                               class="btn btn-danger">{{__("Enter")}}</a>
+                                               class="btn btn-success">{{__("Enter")}}</a>
                                         </div>
                                     </div>
                                 </div>

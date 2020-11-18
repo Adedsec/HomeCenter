@@ -18,7 +18,32 @@ class CreateOrdersTable extends Migration
             $table->unsignedInteger('estate_id');
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('customer_id');
+            $table->unsignedInteger('owner_id');
             $table->timestamps();
+
+            $table->foreign('estate_id')
+                ->references('id')
+                ->on('estates')
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
+
+            $table->foreign('customer_id')
+                ->references('id')
+                ->on('customers')
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
+
+            $table->foreign('owner_id')
+                ->references('id')
+                ->on('owners')
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
         });
     }
 

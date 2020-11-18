@@ -16,6 +16,7 @@ class CreateEstatesTable extends Migration
         Schema::create('estates', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('user_id');
+            $table->unsignedInteger('owner_id');
             $table->string('title', 100);
             $table->text('description');
             $table->Integer('price'); // - rahn & + sell
@@ -25,6 +26,18 @@ class CreateEstatesTable extends Migration
             $table->string('location', 50);
             $table->string('img_link', 255);
             $table->timestamps();
+
+            $table->foreign('user_id')
+                ->references('id ')
+                ->on('users')
+                ->cascadeOnDelete()
+                ->cascadeOnUpdate();
+
+            $table->foreign('owner_id')
+                ->references('id ')
+                ->on('owners')
+                ->cascadeOnDelete()
+                ->cascadeOnUpdate();
         });
     }
 
