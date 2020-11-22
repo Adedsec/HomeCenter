@@ -42,4 +42,19 @@ class User extends Authenticatable
     {
         return $this->hasMany(Estate::class);
     }
+
+    public function owners()
+    {
+        return $this->hasMany(Estate::class);
+    }
+
+    public function customers()
+    {
+        return $this->hasMany(Estate::class);
+    }
+
+    public function orders()
+    {
+        return $this->hasMany(Estate::class);
+    }
 }

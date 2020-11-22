@@ -15,8 +15,8 @@ class CreateCategoryEstateTable extends Migration
     {
         Schema::create('category_estate', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('category_id');
-            $table->unsignedInteger('estate_id');
+            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('estate_id');
             $table->timestamps();
 
             $table->foreign('category_id')

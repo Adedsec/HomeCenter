@@ -15,10 +15,10 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('estate_id');
-            $table->unsignedInteger('user_id');
-            $table->unsignedInteger('customer_id');
-            $table->unsignedInteger('owner_id');
+            $table->unsignedBigInteger('estate_id');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('customer_id');
+            $table->unsignedBigInteger('owner_id');
             $table->timestamps();
 
             $table->foreign('estate_id')

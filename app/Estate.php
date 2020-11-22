@@ -7,7 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 class Estate extends Model
 {
     protected $fillable = [
-
+        'user_id',
+        'owner_id',
+        'title',
+        'description',
+        'price',
+        'rent_price',
+        'usage',
+        'area',
+        'address',
+        'img_link'
     ];
 
 

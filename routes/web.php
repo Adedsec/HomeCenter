@@ -21,7 +21,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('cases/create', 'EstateController@show')->name('Estate.show');
+Route::get('cases/create', 'EstateController@create')->name('Estate.show');
 Route::get('/cases/{category}', 'EstateController@index')->name('Estate.index');
 Route::get('cases/{id}', 'EstateController@show')->name('Estate.show');
 Route::post('/cases', 'EstateController@store')->name('Estate.store');
