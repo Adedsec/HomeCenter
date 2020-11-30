@@ -34,6 +34,19 @@ class EstateController extends Controller
     public function store(Request $request)
     {
         //dd($request->toArray());
+        $request->validate(
+            [
+                'title' => 'required | string',
+                'description' => 'required | string',
+                'price' => 'required | numeric',
+                'rent_price' => 'required | numeric',
+                'usage' => 'required | string',
+                'area' => 'required | numeric',
+                'Address' => 'required',
+                'img_link' => 'required',
+
+            ]
+        );
         $estate = Auth::user()->estates()->create($request->except('_token'));
         $estate->categories()->attach($request->get('category_id'));
         //$estate->owner()->attach($request->get('owner_id'));
@@ -46,8 +59,7 @@ class EstateController extends Controller
         return view('Estate.create');
     }
 
-    public function update($request, $id)
+    public function update(Request $request)
     {
-
     }
 }
