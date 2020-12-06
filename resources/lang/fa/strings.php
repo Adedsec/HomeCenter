@@ -28,6 +28,6 @@ return [
     'CategoryManagement' => 'مدیریت دسته بندی ها ',
     'Category.All' => 'همه ی دسته بندی ها ',
     'Search' => ' جست و جو',
-    'Search.PlaceHolder' => 'متن مورد نظر را وارد کنید '
+    'Search.PlaceHolder' => 'دنبال چی میگردی ؟! '
 
 ];

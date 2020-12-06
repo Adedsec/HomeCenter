@@ -11,15 +11,19 @@
                             @lang('main.heading_text')
                         </p>
                         <p>
-                            <a href="#" class="btn btn-primary my-2">
-                                @auth()
+                            @auth()
+                                <a href="{{route('home')}}" class="btn btn-success my-2">
                                     @lang('main.dashboard')
-                                @else
+                                </a>
+                                <a class="btn btn-outline-primary my-2"
+                                   href="{{route('Estate.create')}}">@lang('strings.AddCase')</a>
+                            @else
+                                <a href="{{route('login')}}" class="btn btn-danger my-2">
                                     @lang('main.login')
-                                @endauth
-
-                            </a>
+                                </a>
+                            @endauth
                         </p>
+
 
                         <!-- search bar -->
                         <div class="card w-75 m-auto bg-transparent ">
@@ -93,10 +97,10 @@
                     </div>
                     <ul class="list-group list-group-flush bg-primary">
                         <a class="list-group-item bg-success text-light"
-                           href="{{route('Estate.index','sell')}}">@lang('strings.OwnerList')
+                           href="{{route('Owner.index')}}">@lang('strings.OwnerList')
                         </a>
                         <a class="list-group-item bg-success text-light"
-                           href="{{route('Estate.index','rent')}}">@lang('strings.AddOwner')
+                           href="{{route('Owner.create')}}">@lang('strings.AddOwner')
                         </a>
                     </ul>
                 </div>
@@ -108,10 +112,10 @@
                     </div>
                     <ul class="list-group list-group-flush bg-primary">
                         <a class="list-group-item bg-success text-light"
-                           href="{{route('Estate.index','sell')}}">@lang('strings.OrderList')
+                           href="#">@lang('strings.OrderList')
                         </a>
                         <a class="list-group-item bg-success text-light"
-                           href="{{route('Estate.index','rent')}}">@lang('strings.AddOrder')
+                           href="#">@lang('strings.AddOrder')
                         </a>
                     </ul>
                 </div>
