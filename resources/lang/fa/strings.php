@@ -25,6 +25,9 @@ return [
     'AddCustomer' => 'افزودن مشتری',
     'OwnerList' => 'لیست مالکان',
     'AddOwner' => 'افزودن مالک',
-    'CategoryManagement' => 'مدیریت دسته بندی ها '
+    'CategoryManagement' => 'مدیریت دسته بندی ها ',
+    'Category.All' => 'همه ی دسته بندی ها ',
+    'Search' => ' جست و جو',
+    'Search.PlaceHolder' => 'متن مورد نظر را وارد کنید '
 
 ];

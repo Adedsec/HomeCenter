@@ -13,15 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('main');
-});
+Route::get('/', 'homeController@main')->name('show.main');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-// Cases Routes 
+// Cases Routes
 
 Route::get('cases/create', 'EstateController@create')->name('Estate.create');
 Route::get('/cases/{category}', 'EstateController@index')->name('Estate.index');
@@ -35,9 +33,6 @@ Route::get('/categories', 'CategoryController@index')->name('Category.index');
 Route::post('/categories', 'CategoryController@store')->name('Category.store');
 Route::put('/categories', 'CategoryController@update')->name('Category.update');
 Route::delete('/categories/{id}', 'CategoryController@delete')->name('Category.delete');
-
-
-
 
 
 //Owners Routes
