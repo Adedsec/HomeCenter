@@ -85,7 +85,7 @@
                            href="{{route('Customer.index')}}">@lang('strings.CustomerList')
                         </a>
                         <a class="list-group-item bg-success text-light"
-                           href="#">@lang('strings.AddCustomer')
+                           href="{{route('Customer.create')}}">@lang('strings.AddCustomer')
                         </a>
                     </ul>
                 </div>

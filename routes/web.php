@@ -43,6 +43,14 @@ Route::get('owners/{id}', 'OwnerController@show')->name('Owner.show');
 Route::post('/owners', 'OwnerController@store')->name('Owner.store');
 Route::put('/owners', 'OwnerController@update')->name('Owner.update');
 
+//Customers Routes
+
+Route::get('customers/create', 'CustomerController@create')->name('Customer.create');
+Route::get('/customers', 'CustomerController@index')->name('Customer.index');
+Route::get('customers/{id}', 'CustomerController@show')->name('Customer.show');
+Route::post('/customers', 'CustomerController@store')->name('Customer.store');
+Route::put('/customers', 'CustomerController@update')->name('Customer.update');
+
 Route::get('/customers', function () {
     echo "this is customer Index ";
 })->name("Customer.index");

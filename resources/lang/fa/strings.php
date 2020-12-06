@@ -28,6 +28,21 @@ return [
     'CategoryManagement' => 'مدیریت دسته بندی ها ',
     'Category.All' => 'همه ی دسته بندی ها ',
     'Search' => ' جست و جو',
-    'Search.PlaceHolder' => 'دنبال چی میگردی ؟! '
+    'Search.PlaceHolder' => 'دنبال چی میگردی ؟! ',
+
+    'Nav' => [
+        'title' => 'خانه',
+        'dashboard' => 'داشبورد',
+        'cases' => 'موردها ',
+        'main category' => 'دسته بندی های اصلی',
+        'order list' => 'لیست سفارشات',
+        'logout' => 'خروج',
+        'login' => 'ورود',
+        'register' => 'ثبت نام ',
+        'category_all' => 'همه',
+        'category_sell' => 'فروش',
+        'category_rent' => 'رهن'
+
+    ]
 
 ];

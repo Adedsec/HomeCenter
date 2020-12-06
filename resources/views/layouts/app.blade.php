@@ -28,7 +28,7 @@
     <nav class="navbar navbar-expand  navbar-dark bg-dark shadow-sm" id="navbar">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
+                @lang('strings.Nav.title')
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -40,27 +40,27 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
                     <li class="navbar-item">
-                        <a href="{{route('home')}}" class="nav-link">Dashboard</a>
+                        <a href="{{route('home')}}" class="nav-link">@lang('strings.Nav.dashboard')</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="{{route('Estate.index','all')}}" class="nav-link">Cases</a>
+                        <a href="{{route('Estate.index','all')}}" class="nav-link">@lang('strings.Nav.cases')</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            {{__("Main Category")}}
+                            @lang('strings.Nav.main category')
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{route('Estate.index','all')}}">{{__("All")}}</a>
-                            <a class="dropdown-item" href="{{route('Estate.index','sell')}}">{{__("Sell")}}</a>
-                            <a class="dropdown-item" href="{{route('Estate.index','rent')}}">{{__("Rent")}}</a>
+                            <a class="dropdown-item"
+                               href="{{route('Estate.index','all')}}">@lang('strings.Nav.category_all')</a>
+                            <a class="dropdown-item"
+                               href="{{route('Estate.index','sell')}}">@lang('strings.Nav.category_sell')</a>
+                            <a class="dropdown-item"
+                               href="{{route('Estate.index','rent')}}">@lang('strings.Nav.category_rent')</a>
                         </div>
                     </li>
                     <li class="navbar-item">
-                        <a href="{{route('Customer.index')}}" class="nav-link">Customers</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a href="{{route('Customer.index')}}" class="nav-link">Order List</a>
+                        <a href="{{route('Customer.index')}}" class="nav-link">@lang('strings.Nav.order list')</a>
                     </li>
                 </ul>
 
@@ -69,11 +69,11 @@
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link" href="{{ route('login') }}">@lang('strings.Nav.login')</a>
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link" href="{{ route('register') }}">@lang('strings.Nav.register')</a>
                             </li>
                         @endif
                     @else
@@ -86,7 +86,7 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                                    @lang('strings.Nav.logout')
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
