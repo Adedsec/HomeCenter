@@ -124,10 +124,4 @@
         </div>
 
 
-        @endsection
-
-
-        @section('javascript')
-            navbar = document.querySelector('#navbar')
-            navbar.classList.add("sticky-top");
 @endsection

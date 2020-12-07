@@ -17,6 +17,12 @@ input[type=number]:focus,
     font-family: Vazir, serif;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .rtl {
     direction: rtl;
 }
