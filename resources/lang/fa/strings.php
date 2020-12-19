@@ -50,10 +50,11 @@ return [
             'cardHeader' => 'افزودن مورد جدید',
             'title' => 'عنوان',
             'title placeholder' => 'عنوان مورد را وارد کنید',
+            'type' => 'نوع آگهی',
             'price' => 'قیمت فروش یا رهن ',
-            'price placeholder' => 'قیمت فروش یا رهن را وارد کنید',
+            'price placeholder' => 'قیمت فروش (در صورتی که نوع آگهی رهن و اجاره است قیمت رهن را وارد کنید)',
             'rentPrice' => 'قیمت اجاره ',
-            'rentPrice placeholder' => 'قیمت اجاره را وارد کنید',
+            'rentPrice placeholder' => 'قیمت اجاره را وارد کنید(در صورتی که نوع آگهی اجاره است در غیر این صورت این مورد را خالی بگذارید)',
             'usage' => 'کاربری',
             'area' => 'متراژ',
             'usage placeholder' => 'کاربری ملک را وارد کنید',
@@ -66,6 +67,21 @@ return [
             'description' => 'توضیحات',
             'description placeholder' => 'توضیحات ملک',
             'addBtn' => 'افزودن ملک',
+            'elevator' => 'آسانسور',
+            'anbari' => 'انباری',
+            'parking' => 'پارکینگ',
+            'features' => 'امکانات',
+            'build_date' => 'سال ساخت ',
+            'room_count' => 'تعداد اتاق',
+            'room_count placeholder' => 'تعداد اتاق'
+
+        ],
+
+        'index' => [
+            'search' => 'جست و جو',
+            'category' => 'دسته بندی',
+            'view' => 'نمایش',
+            'order' => 'ثبت سفارش'
         ]
 
 
@@ -93,6 +109,19 @@ return [
                 'address' => ' آدرس محل سکونت  را وارد کنید',
                 'postCode' => 'کد پستی محل سکونت '
             ]
+        ],
+        'index' => [
+            'cardHeader' => 'لیست مشتریان',
+            'searchBtn' => 'جست و جو',
+            'searchPlaceHolder' => 'دنبال چی میگردی؟',
+            'name' => 'نام',
+            'national code' => 'کد ملی',
+            'email' => 'آدرس ایمیل',
+            'phone number' => 'شماره تلفن',
+            'action' => 'عملیات',
+            'edit' => 'تغییر مشخصات',
+            'delete' => 'حذف',
+            'not found' => 'هیچ مشتری در سیستم وجود ندارد'
         ]
     ],
 
@@ -118,6 +147,19 @@ return [
                 'address' => ' آدرس محل سکونت  را وارد کنید',
                 'postCode' => 'کد پستی محل سکونت '
             ]
+        ],
+        'index' => [
+            'cardHeader' => 'لیست مالک ها',
+            'searchBtn' => 'جست و جو',
+            'searchPlaceHolder' => 'دنبال چی میگردی؟',
+            'name' => 'نام',
+            'national code' => 'کد ملی',
+            'email' => 'آدرس ایمیل',
+            'phone number' => 'شماره تلفن',
+            'action' => 'عملیات',
+            'edit' => 'تغییر مشخصات',
+            'delete' => 'حذف',
+            'not found' => 'هیچ مالکی در سیستم وجود ندارد'
         ]
     ],
 

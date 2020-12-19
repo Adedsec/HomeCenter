@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'homeController@main')->name('show.main');
+Route::get('/', 'HomeController@main')->name('show.main');
 
 Auth::routes();
 
@@ -42,6 +42,7 @@ Route::get('/owners', 'OwnerController@index')->name('Owner.index');
 Route::get('owners/{id}', 'OwnerController@show')->name('Owner.show');
 Route::post('/owners', 'OwnerController@store')->name('Owner.store');
 Route::put('/owners', 'OwnerController@update')->name('Owner.update');
+Route::delete('/owners/{id}', 'OwnerController@delete')->name('Owner.delete');
 
 //Customers Routes
 
@@ -50,7 +51,5 @@ Route::get('/customers', 'CustomerController@index')->name('Customer.index');
 Route::get('customers/{id}', 'CustomerController@show')->name('Customer.show');
 Route::post('/customers', 'CustomerController@store')->name('Customer.store');
 Route::put('/customers', 'CustomerController@update')->name('Customer.update');
+Route::delete('/customers/{id}', 'CustomerController@delete')->name('Customer.delete');
 
-Route::get('/customers', function () {
-    echo "this is customer Index ";
-})->name("Customer.index");

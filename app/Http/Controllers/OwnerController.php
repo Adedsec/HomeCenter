@@ -10,10 +10,15 @@ class OwnerController extends Controller
 {
     public function index()
     {
+
+        $onwers = Owner::all();
+        return view('Owner.index', ['owners' => $onwers]);
     }
 
     public function show($id)
     {
+        $owner = Owner::findOrFail($id);
+        return view('Owner.show', compact('owner'));
     }
 
     public function create()
@@ -34,7 +39,7 @@ class OwnerController extends Controller
             'post_code' => 'required | numeric | digits:10 | unique:owners,post_code'
         ]);
         Auth::user()->owners()->create($request->except('_token'));
-        return redirect('/home');
+        return redirect()->route('Owner.index');
     }
 
     public function edit($id)
@@ -45,5 +50,11 @@ class OwnerController extends Controller
     public function update()
     {
         # code...
+    }
+
+    public function delete($id)
+    {
+        Owner::destroy($id);
+        return redirect()->route('Owner.index');
     }
 }

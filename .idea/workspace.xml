@@ -3,14 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="aacc396b-4a04-40f7-8436-4dcdf7b9d3b6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Estate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Estate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EstateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EstateController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OwnerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OwnerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/fa/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/fa/auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/fa/strings.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/fa/strings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Category/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Customer/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Customer/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Customer/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Customer/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Estate/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Estate/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Owner/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Owner/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Estate/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Estate/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Owner/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Owner/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,6 +214,10 @@
       <workItem from="1607279846452" duration="2994000" />
       <workItem from="1607328458472" duration="4250000" />
       <workItem from="1607342815245" duration="3546000" />
+      <workItem from="1607365802747" duration="12000" />
+      <workItem from="1608008958368" duration="5122000" />
+      <workItem from="1608042209328" duration="33000" />
+      <workItem from="1608206293159" duration="4258000" />
     </task>
     <servers />
   </component>
@@ -229,10 +241,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824/1920.0.1440.860@0.0.1536.824" timestamp="1606894317551" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607274925395">
+    <state x="93" y="93" width="1350" height="638" key="dock-window-1" timestamp="1608011519488">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1440.860@0.0.1536.824" timestamp="1607274925395" />
+    <state x="93" y="93" width="1350" height="638" key="dock-window-1/0.0.1536.824/1920.0.1440.860@0.0.1536.824" timestamp="1608011519488" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1608208751132">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824/1920.0.1440.860@0.0.1536.824" timestamp="1608208751132" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1608011466664">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1440.860@0.0.1536.824" timestamp="1608011466664" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1606120163961" />
   </component>
 </project>

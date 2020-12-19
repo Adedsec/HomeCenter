@@ -52,3 +52,19 @@ input::-webkit-inner-spin-button {
     height: 450px;
     padding-top: 50px;
 }
+
+.align-middle {
+    vertical-align: middle;
+}
+
+.estate_index_btn_right {
+    border-radius: 0 4px 4px 0 !important;
+}
+
+.estate_index_btn_left {
+    border-radius: 4px 0 0 4px !important;
+}
+
+.estate-index-card{
+    align-items: stretch !important; 
+}

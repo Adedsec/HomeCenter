@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Estate extends Model
 {
     protected $fillable = [
+        'type',
         'user_id',
         'owner_id',
         'title',
@@ -15,8 +16,12 @@ class Estate extends Model
         'rent_price',
         'usage',
         'area',
-        'address',
-        'img_link'
+        'Address',
+        'img_link',
+        'build_date',
+        'elevator',
+        'anbari',
+        'parking'
     ];
 
 

@@ -13,8 +13,19 @@ class EstateController extends Controller
 
     public function index($category)
     {
-        $estates = Estate::all();
-        return view('Estate.index', compact('estates'));
+        if ($category == 'sell') {
+            $estates = Estate::where('type', 'sell')->with('categories')->get();
+        } else if ($category == 'rent') {
+            $estates = Estate::where('type', 'rent')->with('categories')->get();
+        } else if ($category == 'all') {
+            $estates = Estate::with('categories')->get();
+        } else {
+            abort(404);
+        }
+
+        $categories = Category::all();
+        //dd($estates);
+        return view('Estate.index', compact('estates', 'categories'));
     }
 
     public function show($id)
@@ -33,20 +44,22 @@ class EstateController extends Controller
 
     public function store(Request $request)
     {
-        //dd($request->toArray());
+
         $request->validate(
             [
+                'type' => 'required',
                 'title' => 'required | string',
                 'description' => 'required | string',
-                'price' => 'required | numeric',
-                'rent_price' => 'required | numeric',
+                'price' => 'numeric',
                 'usage' => 'required | string',
                 'area' => 'required | numeric',
                 'Address' => 'required',
-                'img_link' => 'required',
-
+                'build_date' => 'required | date',
+                'room_count' => 'numeric',
+                'Address' => 'required'
             ]
         );
+        //dd($request->toArray());
         $estate = Auth::user()->estates()->create($request->except('_token'));
         $estate->categories()->attach($request->get('category_id'));
         //$estate->owner()->attach($request->get('owner_id'));

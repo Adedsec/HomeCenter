@@ -24,7 +24,6 @@ class CustomerController extends Controller
 
     public function show($id)
     {
-
     }
 
     public function create()
@@ -47,12 +46,16 @@ class CustomerController extends Controller
 
         Auth::user()->customers()->create($request->except('_token'));
 
-        return redirect()->back();
-
-
+        return redirect()->route('Customer.index');
     }
 
     public function update()
     {
+    }
+
+    public function delete($id)
+    {
+        Customer::destroy($id);
+        return redirect()->back();
     }
 }
