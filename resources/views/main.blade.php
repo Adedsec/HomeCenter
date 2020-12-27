@@ -12,9 +12,6 @@
                         </p>
                         <p>
                             @auth()
-                                <a href="{{route('home')}}" class="btn btn-success my-2">
-                                    @lang('main.dashboard')
-                                </a>
                                 <a class="btn btn-outline-primary my-2"
                                    href="{{route('Estate.create')}}">@lang('strings.AddCase')</a>
                             @else

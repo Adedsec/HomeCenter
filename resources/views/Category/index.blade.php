@@ -44,8 +44,7 @@
                                     <th scope="row">{{ $category->id }}</th>
                                     <td>{{ $category->name }}</td>
                                     <td>
-                                        <a type="button" class="btn btn-primary"
-                                           href="">@lang('strings.Category management.edit')</a>
+
                                         <form class=" d-inline-block" method="POST"
                                               action={{ route('Category.delete', ['id' => $category->id]) }}>
                                             @method('DELETE')

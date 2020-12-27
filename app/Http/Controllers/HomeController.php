@@ -31,6 +31,5 @@ class HomeController extends Controller
     {
         $categories = Category::all();
         return view('main', compact('categories'));
-
     }
 }

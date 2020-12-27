@@ -23,12 +23,26 @@
                                 </form>
                             </div>
                         </div>
+                        @auth()
                         <div class="row">
                             <div class="col-md-2">
                                 <a href="{{route('Customer.create')}}"
                                    class="m-2 btn btn-primary">@lang('strings.Customer.Create.createBtn')</a>
                             </div>
                         </div>
+                        @endauth
+                        @guest
+                        <div class="row">
+                            <div class="col-md-2">
+                                <a  href="{{route('Customer.create')}}"
+                                   class="m-2 btn btn-primary disabled">@lang('strings.Customer.Create.createBtn')</a>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="alert alert-danger">@lang('strings.please login')</div>
+                            </div>
+                        </div>
+                        @endguest
+
                         <table class="table table-dark table-striped text-center  ">
                             <thead>
                             <tr>
@@ -52,7 +66,7 @@
                                     <td class="align-middle">{{ $customer->phone_number }}</td>
                                     @auth
                                         <td class="align-middle">
-                                            <a href="" class="btn btn-primary">@lang('strings.Customer.index.edit')</a>
+                                            <a href="{{ route('Customer.edit' , $customer->id) }}" class="btn btn-primary">@lang('strings.Customer.index.edit')</a>
                                             <form class=" d-inline-block" method="POST"
                                                   action={{ route('Customer.delete', ['id' => $customer->id]) }}>
                                                 @method('DELETE')

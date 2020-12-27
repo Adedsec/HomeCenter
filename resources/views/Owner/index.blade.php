@@ -23,12 +23,25 @@
                                 </form>
                             </div>
                         </div>
+                        @auth()
                         <div class="row">
                             <div class="col-md-2">
                                 <a href="{{route('Owner.create')}}"
                                    class="m-2 btn btn-primary">@lang('strings.Owner.Create.createBtn')</a>
                             </div>
                         </div>
+                        @endauth
+                        @guest
+                        <div class="row">
+                            <div class="col-md-2">
+                                <a  href="{{route('Owner.create')}}"
+                                   class="m-2 btn btn-primary disabled">@lang('strings.Owner.Create.createBtn')</a>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="alert alert-danger">@lang('strings.please login')</div>
+                            </div>
+                        </div>
+                        @endguest
                         <table class="table table-dark table-striped text-center">
                             <thead>
                             <tr>
@@ -52,7 +65,7 @@
                                     <td class="align-middle">{{ $owner->phone_number }}</td>
                                     @auth
                                         <td class="align-middle">
-                                            <a href="" class="btn btn-primary">@lang('strings.Owner.index.edit')</a>
+                                            <a href="{{ route('Owner.edit' , $owner->id) }}" class="btn btn-primary">@lang('strings.Owner.index.edit')</a>
                                             <form class=" d-inline-block" method="POST"
                                                   action={{ route('Owner.delete', ['id' => $owner->id]) }}>
                                                 @method('DELETE')

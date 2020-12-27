@@ -39,16 +39,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
-                    <li class="navbar-item">
-                        <a href="{{route('home')}}" class="nav-link">@lang('strings.Nav.dashboard')</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a href="{{route('Estate.index','all')}}" class="nav-link">@lang('strings.Nav.cases')</a>
-                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            @lang('strings.Nav.main category')
+                            @lang('strings.Nav.cases')
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item"
@@ -57,10 +51,21 @@
                                href="{{route('Estate.index','sell')}}">@lang('strings.Nav.category_sell')</a>
                             <a class="dropdown-item"
                                href="{{route('Estate.index','rent')}}">@lang('strings.Nav.category_rent')</a>
+                            <a class="dropdown-item text-danger"
+                               href="{{route('Estate.create')}}">@lang('strings.add case')</a>
                         </div>
                     </li>
                     <li class="navbar-item">
                         <a href="{{route('Customer.index')}}" class="nav-link">@lang('strings.Nav.order list')</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="{{route('Customer.index')}}" class="nav-link">@lang('strings.Nav.customers')</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="{{route('Owner.index')}}" class="nav-link">@lang('strings.Nav.owners')</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="{{route('Category.index')}}" class="nav-link">@lang('strings.Nav.categories')</a>
                     </li>
                 </ul>
 

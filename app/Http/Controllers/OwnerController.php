@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Auth;
 
 class OwnerController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['index', 'show']);
+    }
     public function index()
     {
 
@@ -42,15 +47,27 @@ class OwnerController extends Controller
         return redirect()->route('Owner.index');
     }
 
-    public function edit($id)
+    public function edit(Owner $owner)
     {
-        # code...
+        return view('Owner.edit', compact('owner'));
     }
 
-    public function update()
+    public function update(Request $request,  Owner $owner)
     {
-        # code...
+        $request->validate([
+            'name' => 'required | string',
+            'father-name' => 'required | string',
+            'email' => 'required | email ',
+            'phone_number' => 'required | numeric | digits:11 | starts_with:09',
+            'national_code' => 'required | numeric | digits:10 ',
+            'birth_date' => 'required | date',
+            'address' => 'required | string',
+            'post_code' => 'required | numeric | digits:10 '
+        ]);
+        $owner->update($request->except('_token'));
+        return redirect()->route('Owner.index');
     }
+
 
     public function delete($id)
     {

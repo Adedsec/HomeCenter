@@ -1,5 +1,7 @@
 <?php
 return [
+    'delete' => 'حذف',
+    'save' => 'ذخیره',
     'Orders' => 'سفارشات',
     'Customers' => 'مشتریان',
     'Users' => 'کاربر',
@@ -29,19 +31,31 @@ return [
     'Category.All' => 'همه ی دسته بندی ها ',
     'Search' => ' جست و جو',
     'Search.PlaceHolder' => 'دنبال چی میگردی ؟! ',
+    'please login' => 'برای دسترسی به تمام امکانات لطفا وارد حساب خود شده یا ثبت نام کنید',
+    'toman' => 'تومان',
+    'price' => 'قیمت',
+    'ejare' => 'اجاره',
+    'free' => 'مجانی',
+    'Customer.edit.cardTitle' => 'تغییر اطلاعات مشتری',
+    'Owner.edit.cardTitle' => 'تغییر اطلاعات مالک',
+    'estate.edit.cardHeader' => 'تغیر اطلاعات مورد',
+    'add case' => 'افزودن مورد جدید',
 
     'Nav' => [
         'title' => 'خانه',
         'dashboard' => 'داشبورد',
         'cases' => 'موردها ',
         'main category' => 'دسته بندی های اصلی',
-        'order list' => 'لیست سفارشات',
+        'order list' => ' سفارشات',
         'logout' => 'خروج',
         'login' => 'ورود',
         'register' => 'ثبت نام ',
         'category_all' => 'همه',
         'category_sell' => 'فروش',
-        'category_rent' => 'رهن'
+        'category_rent' => 'رهن',
+        'customers' => 'مشتریان',
+        'owners' => 'مالکان',
+        'categories' => 'دسته بندی ها',
 
     ],
 

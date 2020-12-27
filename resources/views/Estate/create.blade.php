@@ -9,7 +9,7 @@
                     @lang('strings.estate.create.cardHeader')
                 </div>
                 <div class="card-body p-4">
-                    <form class="form" method="post" action={{route('Estate.store')}}>
+                    <form class="form" method="post" action={{route('Estate.store')}} enctype="multipart/form-data">
                         @csrf
                         <div class="form-row">
                             <div class="form-group col-md-6">
@@ -180,7 +180,7 @@
                         </div>
                         <button type="submit" class="btn btn-success" id="btn">@lang('strings.estate.create.addBtn')
                         </button>
-                        {{ $errors }}
+
                     </form>
                 </div>
             </div>
