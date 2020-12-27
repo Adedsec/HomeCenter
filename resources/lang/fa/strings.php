@@ -41,6 +41,27 @@ return [
     'estate.edit.cardHeader' => 'تغیر اطلاعات مورد',
     'add case' => 'افزودن مورد جدید',
 
+    'Order' => [
+        'Create' => [
+            'estate header' => 'اطلاعات ملک',
+            'owner header' => 'اطلاعات مالک',
+            'customer select and add' => 'انتخاب مشتری و ثبت سفارش',
+            'agree' => 'اطلاعات نمایش داده فوق مورد تایید هستند.',
+            'customers select' => 'انتخاب مشتری'
+
+        ],
+        'index' => [
+            'code' => 'کد سفارش',
+            'cardHeader' => 'لیست  سفارش ها ',
+            'estate' => 'ملک',
+            'owner' => 'مالک',
+            'customer' => 'مشتری',
+            'view' => 'مشاهده',
+            'notfound' => 'هیچ سفارشی در سیستم وجود ندارد'
+
+        ]
+    ],
+
     'Nav' => [
         'title' => 'خانه',
         'dashboard' => 'داشبورد',
@@ -95,7 +116,8 @@ return [
             'search' => 'جست و جو',
             'category' => 'دسته بندی',
             'view' => 'نمایش',
-            'order' => 'ثبت سفارش'
+            'order' => 'ثبت سفارش',
+            'not found' => 'هیچ موردی یافت نشد !'
         ]
 
 
@@ -127,7 +149,7 @@ return [
         'index' => [
             'cardHeader' => 'لیست مشتریان',
             'searchBtn' => 'جست و جو',
-            'searchPlaceHolder' => 'دنبال چی میگردی؟',
+            'searchPlaceHolder' => 'دنبال کی میگردی؟',
             'name' => 'نام',
             'national code' => 'کد ملی',
             'email' => 'آدرس ایمیل',

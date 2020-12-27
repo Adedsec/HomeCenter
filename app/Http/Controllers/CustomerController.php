@@ -70,4 +70,13 @@ class CustomerController extends Controller
         Customer::destroy($id);
         return redirect()->back();
     }
+
+
+    public function search(Request $request)
+    {
+        //dd($request->all());
+
+        $customers = Customer::where('name', 'LIKE', '%' . $request->get('search') . '%')->get();
+        return view('Customer.index', compact('customers'));
+    }
 }

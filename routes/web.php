@@ -22,6 +22,7 @@ Route::get('/home', 'HomeController@main')->name('home');
 // Cases Routes
 
 Route::get('cases/create', 'EstateController@create')->name('Estate.create');
+Route::get('cases/search', 'EstateController@search')->name('Estate.search');
 Route::get('/cases/{category}', 'EstateController@index')->name('Estate.index');
 Route::get('cases/show/{id}', 'EstateController@show')->name('Estate.show');
 Route::get('/cases/edit/{estate}', 'EstateController@edit')->name('Estate.edit');
@@ -45,6 +46,8 @@ Route::post('/owners', 'OwnerController@store')->name('Owner.store');
 Route::get('/owners/edit/{owner}', 'OwnerController@edit')->name('Owner.edit');
 Route::put('/owners/{owner}', 'OwnerController@update')->name('Owner.update');
 Route::delete('/owners/{id}', 'OwnerController@delete')->name('Owner.delete');
+Route::get('owners/search', 'OwnerController@search')->name('Owner.search');
+
 
 //Customers Routes
 
@@ -54,3 +57,12 @@ Route::get('/customers/edit/{customer}', 'CustomerController@edit')->name('Custo
 Route::post('/customers', 'CustomerController@store')->name('Customer.store');
 Route::put('/customers/{customer}', 'CustomerController@update')->name('Customer.update');
 Route::delete('/customers/{id}', 'CustomerController@delete')->name('Customer.delete');
+Route::get('customers/search', 'CustomerController@search')->name('Customer.search');
+
+//Orders Routes
+
+Route::get('orders', 'OrderController@index')->name('Order.index');
+Route::get('order/create/{estate}', 'OrderController@create')->name('Order.create');
+Route::get('orders/{order}', 'OrderController@show')->name('Order.show');
+Route::post('order', 'OrderController@store')->name('Order.store');
+Route::delete('/order/{order}', 'OrderController@delete')->name('Order.delete');

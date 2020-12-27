@@ -20,11 +20,11 @@ class EstateController extends Controller
     public function index($category)
     {
         if ($category == 'sell') {
-            $estates = Estate::where('type', 'sell')->with('categories')->orderBy('id', 'desc')->paginate(9);
+            $estates = Estate::where(['type' => 'sell', 'status' => '0'])->with('categories')->orderBy('id', 'desc')->paginate(9);
         } else if ($category == 'rent') {
-            $estates = Estate::where('type', 'rent')->with('categories')->orderBy('id', 'desc')->paginate(9);
+            $estates = Estate::where(['type' => 'rent', 'status' => '0'])->with('categories')->orderBy('id', 'desc')->paginate(9);
         } else if ($category == 'all') {
-            $estates = Estate::with('categories')->orderBy('id', 'desc')->paginate(9);
+            $estates = Estate::where(['status' => '0'])->with('categories')->orderBy('id', 'desc')->paginate(9);
         } else {
             abort(404);
         }
@@ -115,5 +115,22 @@ class EstateController extends Controller
         if (File::exists($image)) File::delete($image);
         Estate::destroy($estate->id);
         return redirect()->route('Estate.index', 'all');
+    }
+
+    public function search(Request $request)
+    {
+        if ($request->category != "0") {
+            $estates = Estate::whereStatus('0')->where('title', 'LIKE', '%' . $request->get('search') . '%')
+                ->whereHas('categories', function ($query) use ($request) {
+                    $query->where('categories.id', $request->get('category'));
+                })->orderBy('id', 'desc')->paginate(50);
+        } else {
+            $estates = Estate::whereStatus('0')->where('title', 'LIKE', '%' . $request->get('search') . '%')
+                ->orderBy('id', 'desc')->paginate(50);
+        }
+
+        $categories = Category::all();
+        //dd($estates);
+        return view('Estate.index', compact('estates', 'categories'));
     }
 }

@@ -13,7 +13,8 @@
                     <div class="card-body p-5">
                         <div class="row justify-content-center mb-5">
                             <div class="col-7">
-                                <form class="w-100" action="">
+                                <form class="w-100" method="GET" action="{{ route('Customer.search') }}">
+                                    @csrf
                                     <div class="form-row w-100">
                                         <input class=" col-9 form-control" type="text" name="search" id="search"
                                                placeholder="@lang('strings.Customer.index.searchPlaceHolder')">

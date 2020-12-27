@@ -56,7 +56,7 @@
                         </div>
                     </li>
                     <li class="navbar-item">
-                        <a href="{{route('Customer.index')}}" class="nav-link">@lang('strings.Nav.order list')</a>
+                        <a href="{{route('Order.index')}}" class="nav-link">@lang('strings.Nav.order list')</a>
                     </li>
                     <li class="navbar-item">
                         <a href="{{route('Customer.index')}}" class="nav-link">@lang('strings.Nav.customers')</a>

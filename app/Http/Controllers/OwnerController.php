@@ -74,4 +74,12 @@ class OwnerController extends Controller
         Owner::destroy($id);
         return redirect()->route('Owner.index');
     }
+
+    public function search(Request $request)
+    {
+        //dd($request->all());
+
+        $owners = Owner::where('name', 'LIKE', '%' . $request->get('search') . '%')->get();
+        return view('Owner.index', compact('owners'));
+    }
 }

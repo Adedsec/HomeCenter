@@ -8,6 +8,8 @@ class Order extends Model
 {
     //
 
+    protected $fillable = ['estate_id', 'owner_id', 'customer_id'];
+
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -15,16 +17,16 @@ class Order extends Model
 
     public function estate()
     {
-        return $this->belongsTo(Estate::class);
+        return $this->hasOne(Estate::class);
     }
 
     public function customer()
     {
-        return $this->belongsTo(Customer::class);
+        return $this->hasOne(Customer::class);
     }
 
     public function owner()
     {
-        return $this->belongsTo(Owner::class);
+        return $this->hasOne(Owner::class);
     }
 }

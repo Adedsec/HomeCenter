@@ -24,15 +24,16 @@
 
                         <!-- search bar -->
                         <div class="card w-75 m-auto bg-transparent ">
-                            <form class="d-flex justify-content-center align-items-center mt-5 mb-5">
-                                <div class="form-row align-items-around w-75">
-                                    <div class="col-6 my-1">
-                                        <input class="form-control" type="text"
+                            <form class="d-flex justify-content-center align-items-center mt-5 mb-5" action="{{ route('Estate.search') }}" method="GET">
+                                @csrf
+                                <div class="form-row align-items-around w-50">
+                                    <div class="col-7 my-1">
+                                        <input class="form-control" type="text" name="search"
                                                placeholder="@lang('strings.Search.PlaceHolder')" aria-label="Search">
                                     </div>
-                                    <div class="col-4 my-1">
+                                    <div class="col-3 my-1">
                                         <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Category</label>
-                                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                        <select class="custom-select mr-sm-2" name="category" id="inlineFormCustomSelect">
                                             <option value="0" selected>@lang('strings.Category.All')</option>
                                             @foreach($categories as $category)
                                                 <option value="{{$category->id}}">{{$category->name}}</option>
@@ -109,10 +110,10 @@
                     </div>
                     <ul class="list-group list-group-flush bg-primary">
                         <a class="list-group-item bg-success text-light"
-                           href="#">@lang('strings.OrderList')
+                           href="{{ route('Order.index') }}">@lang('strings.OrderList')
                         </a>
-                        <a class="list-group-item bg-success text-light"
-                           href="#">@lang('strings.AddOrder')
+                        <a  class=" disabled list-group-item bg-danger text-light"
+                           href="{{ route('Estate.index', 'all') }}">@lang('strings.AddOrder')
                         </a>
                     </ul>
                 </div>

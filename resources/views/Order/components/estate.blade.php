@@ -1,17 +1,13 @@
-@extends('layouts.app')
-
-@section('content')
-
-
-<div class="container bg-light mt-5">
-    <div class=" card p-2">
+<div class="card">
+    <div class="card-header bg-dark text-light">
+        @lang('strings.Order.Create.estate header')
+    </div>
+    <div class="card-body">
         <div class="row">
-            <div class=" col-md-5 offset-1 mt-5 d-flex flex-column justify-content-between">
+            <div class="col-md-6">
                 <div>
                     <div>
                         <h4  class=" d-inline-block mb-4">{{ $estate->title }}</h4>
-                        <a class=" m-2 d-inline-block btn btn-primary" href="{{ route('Estate.edit' , $estate->id ) }}">@lang('strings.Edit')</a>
-                        <a class=" m-2 d-inline-block btn btn-danger" href="{{ route('Estate.delete' , $estate->id ) }}">@lang('strings.delete')</a>
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
@@ -53,31 +49,9 @@
                 </div>
 
             </div>
-            <div class=" p-0 col-md-6 d-flex align-items-center justify-content-center mt-5">
-
-                <img src="{{ !is_null($estate->img_link) && File::exists(public_path('uploads'.'\\'.$estate->img_link)) ?  asset('uploads/'.$estate->img_link)  :  'https://via.placeholder.com/400x400?text=image' }}" width="450" height="400" alt="estate picture">
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-6 offset-1">
-                <div class="row d-flex flex-column justify-content-center align-items-start mt-3">
-                    @if($estate->type == 'sell')
-                    <p class="h4"> <strong class=" font-weight-bold">@lang('strings.price')</strong>   :   {{ number_format($estate->price) }} @lang('strings.toman')</p>
-                    @else
-                    <p class="h4"> <strong class=" font-weight-bold">@lang('strings.Rent')</strong>   :   {{ number_format($estate->price) }} @lang('strings.toman')</p>
-                    <hr>
-                    <p class="h4"> <strong class=" font-weight-bold">@lang('strings.ejare')</strong>   :   {{ number_format($estate->rent_price) }} @lang('strings.toman')</p>
-                    @endif
-
-                </div>
-                <div class="row mt-4">
-                    <div class=" col-md-3 offset-2">
-                        <a class=" btn btn-outline-success" href="{{ route('Order.create' , $estate->id ) }}"> ثبت سفارش  </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="list-group">
+            <div class="col-md-6 mt-5">
+                <h5 class=" mb-3">@lang('strings.estate.create.features')</h5>
+                <ul class="list-group">
                     <li class="list-group-item {{ $estate->elevator ? 'active' : 'disabled' }} ">
                         @lang('strings.estate.create.elevator')
                       </li>
@@ -87,16 +61,18 @@
                       <li class="list-group-item {{ $estate->anbari ? 'active' : 'disabled' }}">
                         @lang('strings.estate.create.anbari')
                       </li>
+                </ul>
+                <div class="row d-flex flex-column justify-content-center align-items-center mt-5 pr-3">
+                    @if($estate->type == 'sell')
+                    <p class="h4"> <strong class=" font-weight-bold">@lang('strings.price')</strong>   :   {{ number_format($estate->price) }} @lang('strings.toman')</p>
+                    @else
+                    <p class="h4"> <strong class=" font-weight-bold">@lang('strings.Rent')</strong>   :   {{ number_format($estate->price) }} @lang('strings.toman')</p>
+                    <hr>
+                    <p class="h4 ml-4"> <strong class=" font-weight-bold">@lang('strings.ejare')</strong>   :   {{ number_format($estate->rent_price) }} @lang('strings.toman')</p>
+                    @endif
+
                 </div>
             </div>
         </div>
-        <div class="row p-5 d-flex flex-column">
-            <h5 class=" mb-4">توضیحات</h5>
-            <p>{{ $estate->description }}</p>
-        </div>
     </div>
-
 </div>
-
-
-@endsection

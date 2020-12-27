@@ -8,14 +8,14 @@
             <div class="bg-light w-100 m-5">
                 <div class=" container">
                     <div class="row d-flex align-items-center justify-content-center">
-                        <div class=" form col-9 ">
+                        <form class=" form col-9 " action="{{ route('Estate.search') }}" method="GET">
                             <div class="row mb-5">
                                 <div class="col-6 active-cyan-4">
-                                    <input class="form-control active-cyan-4" type="text"
+                                    <input class="form-control active-cyan-4" type="text" name="search"
                                         placeholder="@lang('strings.estate.index.search')" aria-label="Search">
                                 </div>
                                 <div class="col-3 ">
-                                    <select class="form-control">
+                                    <select class="form-control" name="category">
                                         <option value="0">@lang('strings.estate.index.category')</option>
                                         @foreach ($categories as $category)
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -27,7 +27,7 @@
                                         value="@lang('strings.estate.index.search')">
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                     <div class="row p-0">
                         <div class="container-fluid">
@@ -40,7 +40,7 @@
                                             <img src="{{ !is_null($estate->img_link) && File::exists(public_path('uploads'.'\\'.$estate->img_link)) ?  asset('uploads/'.$estate->img_link)  :  'https://via.placeholder.com/140x100?text=image' }}"
                                                 alt="product-image" class="card-img-top">
                                             <div class="card-body d-flex flex-column justify-content-center">
-                                                <a href="" class=" text-dark card-link">
+                                                <a href="{{ route('Estate.show',$estate->id) }}" class=" text-dark card-link">
                                                     <h4 class="card-title">{{ $estate->title }}</h4>
                                                     <p class="card-text">{{ $estate->description }}</p>
                                                 </a>
@@ -72,7 +72,7 @@
                                                         <a href="{{ route('Estate.show' , $estate->id) }}"
                                                             class=" w-50 btn btn-outline-primary estate_index_btn_right">@lang('strings.estate.index.view')
                                                         </a>
-                                                        <a href="#"
+                                                        <a href="{{ route('Order.create',$estate->id) }}"
                                                             class=" w-50 btn btn-outline-success estate_index_btn_left">@lang('strings.estate.index.order')
                                                         </a>
                                                     </div>
@@ -85,14 +85,20 @@
 
                                     </div>
                                     @empty
-
+                                    <div class="row w-100 d-flex justify-content-center align-items-center">
+                                        <div>
+                                            <p class="h5 text-center">@lang('strings.estate.index.not found')</p>
+                                        </div>
+                                    </div>
                                     @endforelse
 
                                 </div>
                             </div>
                             <div class="row mt-5 d-flex justify-content-center align-items-center">
                                 <div class="h4">
-                                    {{ $estates->links() }}
+                                    @if(!is_null($estates))
+                                    {{$estates->links()}}
+                                    @endif
                                 </div>
 
                             </div>

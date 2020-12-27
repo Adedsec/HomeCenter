@@ -13,10 +13,11 @@
                     <div class="card-body p-5">
                         <div class="row justify-content-center mb-5">
                             <div class="col-7">
-                                <form class="w-100" action="">
+                                <form class="w-100" method="GET" action="{{ route('Owner.search') }}">
+                                    @csrf
                                     <div class="form-row w-100">
                                         <input class=" col-9 form-control" type="text" name="search" id="search"
-                                               placeholder="@lang('strings.Owner.index.searchPlaceHolder')">
+                                               placeholder="@lang('strings.Customer.index.searchPlaceHolder')">
                                         <input class="btn btn-success col-2 ml-1" type="submit"
                                                value="@lang('strings.Owner.index.searchBtn')">
                                     </div>
