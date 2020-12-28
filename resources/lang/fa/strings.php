@@ -47,7 +47,8 @@ return [
             'owner header' => 'اطلاعات مالک',
             'customer select and add' => 'انتخاب مشتری و ثبت سفارش',
             'agree' => 'اطلاعات نمایش داده فوق مورد تایید هستند.',
-            'customers select' => 'انتخاب مشتری'
+            'customers select' => 'انتخاب مشتری',
+            'customer header' => 'اطلاعات مشتری'
 
         ],
         'index' => [
