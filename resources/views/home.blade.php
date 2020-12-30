@@ -116,6 +116,16 @@
                                             </strong>{{\Illuminate\Support\Facades\Auth::user()->email}}
                                         </p>
 
+                                        <p class=" card-text"><strong>مجموع مبلغ سفارش های ثبت شده توسط کاربر</strong> : {{ number_format($totalAmount[0]->total)  }}  @lang('strings.toman') </p>
+                                        <p class=" card-text"><strong>میانگین سن مشتریان</strong> : {{ $customerAvgAge }}  </p>
+                                        <p class="card-text"><strong>نام کاربرانی که در سیستم حداقل یک سفارش ثبت کرده اند : </strong></p>
+                                        <ul>
+                                            @foreach($userHasOrder as $user)
+                                            <li>{{ $user->name }}</li>
+                                            @endforeach
+                                        </ul>
+
+
                                     </div>
                                     <div class="card-footer">
                                         <a href="#" class="btn btn-danger">{{__("dashboard.EditProfile")}}</a>

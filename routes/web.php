@@ -17,7 +17,7 @@ Route::get('/', 'HomeController@main')->name('show.main');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@main')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
 // Cases Routes
 
